@@ -7,10 +7,10 @@ if ( post_password_required() ) {
 	<?php if ( have_comments() ) : ?>
 		<h2 class="font-serif text-2xl font-bold text-slate-900 dark:text-white">
 			<?php
-			$Argamora_count = get_comments_number();
+			$inkwell_count = get_comments_number();
 			printf(
-				esc_html( _nx( '%s comment', '%s comments', $Argamora_count, 'comments title', 'Argamora' ) ),
-				esc_html( number_format_i18n( $Argamora_count ) )
+				esc_html( _nx( '%s comment', '%s comments', $inkwell_count, 'comments title', 'inkwell' ) ),
+				esc_html( number_format_i18n( $inkwell_count ) )
 			);
 			?>
 		</h2>
@@ -20,7 +20,7 @@ if ( post_password_required() ) {
 			wp_list_comments(
 				array(
 					'style'       => 'ol',
-					'callback'    => 'Argamora_comment_callback',
+					'callback'    => 'inkwell_comment_callback',
 					'avatar_size' => 40,
 				)
 			);
@@ -31,16 +31,16 @@ if ( post_password_required() ) {
 	<?php endif; ?>
 
 	<?php if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-		<p class="mt-6 text-slate-500 dark:text-slate-400"><?php esc_html_e( 'Comments are closed.', 'Argamora' ); ?></p>
+		<p class="mt-6 text-slate-500 dark:text-slate-400"><?php esc_html_e( 'Comments are closed.', 'inkwell' ); ?></p>
 	<?php endif; ?>
 
 	<?php
 	comment_form(
 		array(
-			'title_reply'          => __( 'Leave a comment', 'Argamora' ),
+			'title_reply'          => __( 'Leave a comment', 'inkwell' ),
 			'title_reply_before'   => '<h2 id="reply-title" class="mt-12 font-serif text-2xl font-bold text-slate-900 dark:text-white">',
 			'title_reply_after'    => '</h2>',
-			'comment_notes_before' => '<p class="mt-4 text-sm text-slate-500 dark:text-slate-400">' . __( 'Your email address will not be published.', 'Argamora' ) . '</p>',
+			'comment_notes_before' => '<p class="mt-4 text-sm text-slate-500 dark:text-slate-400">' . __( 'Your email address will not be published.', 'inkwell' ) . '</p>',
 			'class_submit'         => 'cursor-pointer rounded-full bg-brand-600 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700',
 			'submit_field'         => '<p class="form-submit mt-4">%1$s %2$s</p>',
 		)

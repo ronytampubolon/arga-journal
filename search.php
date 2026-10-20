@@ -7,8 +7,8 @@ get_header();
 			<?php
 			printf(
 				/* translators: %s: search query. */
-				esc_html__( 'Results for &ldquo;%s&rdquo;', 'Argamora' ),
-				'<span class="text-brand-700 dark:text-brand-400">' . esc_html( get_search_query( false ) ) . '</span>'
+				esc_html__( 'Results for &ldquo;%s&rdquo;', 'inkwell' ),
+				'<span class="text-brand-700 dark:text-brand-400">' . esc_html( get_search_query() ) . '</span>'
 			);
 			?>
 		</h1>
@@ -28,8 +28,8 @@ get_header();
 		the_posts_pagination(
 			array(
 				'mid_size'  => 1,
-				'prev_text' => esc_html__( '&larr; Newer', 'Argamora' ),
-				'next_text' => esc_html__( 'Older &rarr;', 'Argamora' ),
+				'prev_text' => esc_html__( '&larr; Newer', 'inkwell' ),
+				'next_text' => esc_html__( 'Older &rarr;', 'inkwell' ),
 			)
 		);
 		?>

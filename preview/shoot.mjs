@@ -22,7 +22,7 @@ const overflowReport = [];
 for (const mode of ['light', 'dark']) {
 	const context = await browser.newContext();
 	if (mode === 'dark') {
-		await context.addInitScript(() => localStorage.setItem('arga-mora', 'dark'));
+		await context.addInitScript(() => localStorage.setItem('inkwell-theme', 'dark'));
 	}
 	for (const vp of viewports) {
 		const page = await context.newPage();

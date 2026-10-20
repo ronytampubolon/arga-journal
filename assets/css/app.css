@@ -47,6 +47,7 @@
     --text-5xl--line-height: 1;
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
+    --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
@@ -744,6 +745,9 @@
   .inline-block {
     display: inline-block;
   }
+  .table {
+    display: table;
+  }
   .aspect-\[2\/1\] {
     aspect-ratio: 2/1;
   }
@@ -889,6 +893,9 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+  .rounded {
+    border-radius: 0.25rem;
+  }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
@@ -955,6 +962,9 @@
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
+  .px-1\.5 {
+    padding-inline: calc(var(--spacing) * 1.5);
+  }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
@@ -963,6 +973,9 @@
   }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
+  }
+  .py-0\.5 {
+    padding-block: calc(var(--spacing) * 0.5);
   }
   .py-1 {
     padding-block: var(--spacing);
@@ -1063,6 +1076,9 @@
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
   }
+  .text-\[10px\] {
+    font-size: 10px;
+  }
   .text-\[15px\] {
     font-size: 15px;
   }
@@ -1085,6 +1101,10 @@
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
   }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
@@ -1138,6 +1158,9 @@
   }
   .uppercase {
     text-transform: uppercase;
+  }
+  .not-italic {
+    font-style: normal;
   }
   .antialiased {
     -webkit-font-smoothing: antialiased;
@@ -1499,6 +1522,12 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    background-color: #ffffff;
+    color-scheme: light;
+  }
+  html.dark {
+    background-color: var(--color-slate-950);
+    color-scheme: dark;
   }
   body {
     overflow-wrap: break-word;

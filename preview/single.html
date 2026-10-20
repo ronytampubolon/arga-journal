@@ -7,7 +7,7 @@
 <script>
 (function () {
 	try {
-		var theme = localStorage.getItem('arga-mora');
+		var theme = localStorage.getItem('inkwell-theme');
 		if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
 			document.documentElement.classList.add('dark');
 		}
@@ -16,7 +16,7 @@
 </script>
 <link rel="stylesheet" href="../style.css">
 <link rel="stylesheet" href="../assets/css/app.css">
-<title>Argamora — Single Post</title>
+<title>Inkwell — Single Post</title>
 </head>
 <body class="bg-white font-sans text-slate-800 antialiased dark:bg-slate-950 dark:text-slate-200">
 <a href="#primary" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-brand-600 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white">Skip to content</a>
@@ -27,7 +27,7 @@
 			<button id="nav-toggle" type="button" class="rounded-full p-2 text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-700 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 md:hidden" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle navigation">
 				<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
 			</button>
-			<a href="index.html" class="truncate font-serif text-xl font-bold tracking-tight text-slate-900 transition-colors hover:text-brand-700 dark:text-white dark:hover:text-brand-400">Argamora Journal</a>
+			<a href="index.html" class="truncate font-serif text-xl font-bold tracking-tight text-slate-900 transition-colors hover:text-brand-700 dark:text-white dark:hover:text-brand-400">Inkwell Journal</a>
 		</div>
 		<div class="flex items-center gap-1 sm:gap-2">
 			<div id="primary-menu" class="absolute inset-x-0 top-full hidden border-b border-slate-900/10 bg-white dark:border-slate-50/10 dark:bg-slate-950 md:static md:block md:border-0 md:bg-transparent">
@@ -40,8 +40,8 @@
 			</div>
 			<div class="hidden sm:block">
 				<form role="search" method="get" class="search-form relative" action="#">
-					<label for="Argamora-search-field" class="sr-only">Search</label>
-					<input type="search" id="Argamora-search-field" class="search-field w-32 rounded-full border border-slate-300 bg-transparent py-1.5 pl-9 pr-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:w-52 focus:border-brand-500 dark:border-slate-700 dark:text-slate-100" placeholder="Search" value="" name="s">
+					<label for="inkwell-search-field" class="sr-only">Search</label>
+					<input type="search" id="inkwell-search-field" class="search-field w-32 rounded-full border border-slate-300 bg-transparent py-1.5 pl-9 pr-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:w-52 focus:border-brand-500 dark:border-slate-700 dark:text-slate-100" placeholder="Search" value="" name="s">
 					<button type="submit" class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 transition-colors hover:text-brand-600 dark:hover:text-brand-400" aria-label="Submit search">
 						<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
 					</button>
@@ -212,7 +212,7 @@
 
 <footer class="border-t border-slate-200 dark:border-slate-800">
 	<div class="mx-auto flex max-w-5xl flex-col items-center gap-4 px-4 py-10 text-sm text-slate-500 dark:text-slate-400 sm:px-6">
-		<p>&copy; 2026 Argamora Journal</p>
+		<p>&copy; 2026 Inkwell Journal</p>
 		<p class="text-xs text-slate-400 dark:text-slate-500">Powered by WordPress</p>
 	</div>
 </footer>

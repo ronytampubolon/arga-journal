@@ -15,11 +15,5 @@
 				{ "slug": "paper", "name": "Paper", "color": "#ffffff" }
 			]
 		}
-	},
-	"styles": {
-		"color": {
-			"background": "#ffffff",
-			"text": "#1e293b"
-		}
 	}
 }

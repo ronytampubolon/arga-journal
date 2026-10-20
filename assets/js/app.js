@@ -17,7 +17,7 @@
 		toggle.addEventListener('click', function () {
 			var dark = root.classList.toggle('dark');
 			try {
-				localStorage.setItem('arga-mora', dark ? 'dark' : 'light');
+				localStorage.setItem('inkwell-theme', dark ? 'dark' : 'light');
 			} catch (e) {}
 			sync();
 		});

@@ -15,8 +15,8 @@
 			);
 		}
 		?>
-		<p>&copy; <?php echo esc_html( date_i18n( 'Y' ) ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?></p>
-		<p class="text-xs text-slate-400 dark:text-slate-500"><?php esc_html_e( 'Built with ❤️', 'Argamora' ); ?></p>
+		<p>&copy; <?php echo esc_html( date_i18n( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?></p>
+		<p class="text-xs text-slate-400 dark:text-slate-500"><?php esc_html_e( 'Built with 🍳', 'ronyfriendy' ); ?></p>
 	</div>
 </footer>
 <?php wp_footer(); ?>
