@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": true,
+		"layout": {
+			"contentSize": "680px",
+			"wideSize": "1100px"
+		},
+		"color": {
+			"defaultPalette": false,
+			"palette": [
+				{ "slug": "brand", "name": "Brand", "color": "#1a8917" },
+				{ "slug": "ink", "name": "Ink", "color": "#0f172a" },
+				{ "slug": "paper", "name": "Paper", "color": "#ffffff" }
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "#ffffff",
+			"text": "#1e293b"
+		}
+	}
+}

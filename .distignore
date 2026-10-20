@@ -1,0 +1,13 @@
+# Files excluded when packaging the theme (wp dist-archive / Theme Check).
+# Never ship development tooling, build sources or dependency trees.
+.git
+.gitignore
+.distignore
+.DS_Store
+node_modules
+preview
+src
+package.json
+package-lock.json
+*.md
+*.log

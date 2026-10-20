@@ -1,0 +1,106 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	--font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	--font-serif: charter, "Bitstream Charter", Cambria, Georgia, "Times New Roman", serif;
+
+	--color-brand-50: #f0fdf4;
+	--color-brand-100: #dcfce7;
+	--color-brand-200: #bbf7d0;
+	--color-brand-300: #86efac;
+	--color-brand-400: #4ade80;
+	--color-brand-500: #22c55e;
+	--color-brand-600: #1a8917;
+	--color-brand-700: #14700f;
+	--color-brand-800: #166534;
+	--color-brand-900: #14532d;
+}
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		@apply break-words;
+	}
+
+	::selection {
+		@apply bg-brand-200 text-brand-900 dark:bg-brand-800 dark:text-brand-100;
+	}
+}
+
+@layer components {
+	.navigation .nav-links {
+		@apply mt-12 flex flex-wrap justify-center gap-1.5 text-sm font-medium;
+	}
+
+	.navigation .page-numbers {
+		@apply rounded-full px-3.5 py-1.5 text-slate-600 transition-colors hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800;
+	}
+
+	.navigation .page-numbers.current {
+		@apply bg-brand-600 text-white hover:bg-brand-600;
+	}
+
+	.current-menu-item > a,
+	.current_page_item > a {
+		@apply text-brand-700 dark:text-brand-400;
+	}
+
+	.comment-list {
+		@apply list-none;
+	}
+
+	.children {
+		@apply ml-3 mt-6 list-none space-y-6 border-l border-slate-200 pl-4 dark:border-slate-800 sm:ml-6 sm:pl-6;
+	}
+
+	.comment-list > li + li {
+		@apply mt-8;
+	}
+
+	.comment-reply-link {
+		@apply text-sm font-medium text-brand-600 hover:underline dark:text-brand-400;
+	}
+
+	.comment-form label {
+		@apply mb-1 block text-sm font-medium;
+	}
+
+	.comment-form .comment-notes,
+	.comment-form .logged-in-as {
+		@apply text-sm text-slate-500 dark:text-slate-400;
+	}
+
+	.comment-form .required {
+		@apply text-red-500;
+	}
+
+	.comment-form input:not([type="checkbox"]):not([type="submit"]),
+	.comment-form textarea {
+		@apply w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-brand-500 dark:border-slate-700 dark:text-slate-100;
+	}
+}
+
+.entry-content code,
+.entry-content pre {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.entry-content :where(pre) {
+	overflow-x: auto;
+}
+
+.entry-content :where(table) {
+	display: block;
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+.entry-content :where(iframe, video) {
+	max-width: 100%;
+}

@@ -1,0 +1,16 @@
+{
+	"name": "Argamora",
+	"private": true,
+	"version": "1.0.0",
+	"description": "Medium-style WordPress blog theme built with Tailwind CSS.",
+	"scripts": {
+		"build": "tailwindcss -i ./src/input.css -o ./assets/css/app.css",
+		"watch": "tailwindcss -i ./src/input.css -o ./assets/css/app.css --watch",
+		"minify": "tailwindcss -i ./src/input.css -o ./assets/css/app.css --minify"
+	},
+	"devDependencies": {
+		"@tailwindcss/cli": "^4.1.0",
+		"@tailwindcss/typography": "^0.5.16",
+		"tailwindcss": "^4.1.0"
+	}
+}

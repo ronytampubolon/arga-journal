@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff" id="meta-theme-color">
+<script>
+(function () {
+	try {
+		var theme = localStorage.getItem('arga-mora');
+		if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+			document.documentElement.classList.add('dark');
+		}
+	} catch (e) {}
+})();
+</script>
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../assets/css/app.css">
+<title>Argamora — Home</title>
+</head>
+<body class="bg-white font-sans text-slate-800 antialiased dark:bg-slate-950 dark:text-slate-200">
+<a href="#primary" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-brand-600 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white">Skip to content</a>
+
+<header class="sticky top-0 z-40 border-b border-slate-900/10 bg-white/80 backdrop-blur dark:border-slate-50/10 dark:bg-slate-950/80">
+	<div class="relative mx-auto flex h-16 max-w-5xl items-center justify-between gap-4 px-4 sm:px-6">
+		<div class="flex min-w-0 items-center gap-1">
+			<button id="nav-toggle" type="button" class="rounded-full p-2 text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-700 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 md:hidden" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle navigation">
+				<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+			</button>
+			<a href="#" class="truncate font-serif text-xl font-bold tracking-tight text-slate-900 transition-colors hover:text-brand-700 dark:text-white dark:hover:text-brand-400">Argamora Journal</a>
+		</div>
+		<div class="flex items-center gap-1 sm:gap-2">
+			<div id="primary-menu" class="absolute inset-x-0 top-full hidden border-b border-slate-900/10 bg-white dark:border-slate-50/10 dark:bg-slate-950 md:static md:block md:border-0 md:bg-transparent">
+				<ul class="flex flex-col gap-1 px-4 py-3 text-sm font-medium sm:px-6 md:flex-row md:items-center md:gap-6 md:bg-transparent md:p-0">
+					<li><a href="#" class="text-slate-600 transition-colors hover:text-slate-900 dark:text-slate-300 dark:hover:text-white">Home</a></li>
+					<li><a href="#" class="text-brand-700 transition-colors hover:text-slate-900 dark:text-brand-400 dark:hover:text-white">Essays</a></li>
+					<li><a href="#" class="text-slate-600 transition-colors hover:text-slate-900 dark:text-slate-300 dark:hover:text-white">Notes</a></li>
+					<li><a href="#" class="text-slate-600 transition-colors hover:text-slate-900 dark:text-slate-300 dark:hover:text-white">About</a></li>
+				</ul>
+			</div>
+			<div class="hidden sm:block">
+				<form role="search" method="get" class="search-form relative" action="#">
+					<label for="Argamora-search-field" class="sr-only">Search</label>
+					<input type="search" id="Argamora-search-field" class="search-field w-32 rounded-full border border-slate-300 bg-transparent py-1.5 pl-9 pr-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:w-52 focus:border-brand-500 dark:border-slate-700 dark:text-slate-100" placeholder="Search" value="" name="s">
+					<button type="submit" class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 transition-colors hover:text-brand-600 dark:hover:text-brand-400" aria-label="Submit search">
+						<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+					</button>
+				</form>
+			</div>
+			<button id="theme-toggle" type="button" class="rounded-full p-2 text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-700 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200" aria-label="Toggle dark mode" aria-pressed="false">
+				<svg class="h-5 w-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"/></svg>
+				<svg class="hidden h-5 w-5 dark:block" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"/></svg>
+			</button>
+		</div>
+	</div>
+</header>
+
+<main id="primary" class="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
+	<header class="border-b border-slate-200 pb-12 pt-4 text-center dark:border-slate-800 sm:pt-8">
+		<p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-600 dark:text-brand-400">Personal blog</p>
+		<h1 class="mt-3 font-serif text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">Argamora Journal</h1>
+		<p class="mx-auto mt-3 max-w-xl text-lg leading-relaxed text-slate-500 dark:text-slate-400">Essays on software, design, and the craft of building things for the web.</p>
+	</header>
+
+	<div class="divide-y divide-slate-200 dark:divide-slate-800">
+		<article class="group flex flex-col-reverse gap-4 py-8 sm:flex-row sm:items-center sm:gap-8">
+			<div class="min-w-0 flex-1">
+				<div class="flex items-center gap-2 text-xs">
+					<a href="#" class="font-medium text-brand-600 hover:underline dark:text-brand-400">Essays</a>
+					<span aria-hidden="true" class="text-slate-400">&middot;</span>
+					<time class="text-slate-500 dark:text-slate-400" datetime="2026-10-18">October 18, 2026</time>
+				</div>
+				<h2 class="mt-2 font-serif text-xl font-bold leading-snug sm:text-2xl">
+					<a href="single.html" class="text-slate-900 transition-colors hover:text-brand-700 dark:text-white dark:hover:text-brand-400">Shipping a WordPress theme with Tailwind in 2026</a>
+				</h2>
+				<p class="mt-2 leading-relaxed text-slate-600 line-clamp-2 dark:text-slate-400">A practical walkthrough of wiring Tailwind CSS v4 into a classic WordPress theme &mdash; from the build pipeline to dark mode, typography, and keeping the whole thing maintainable.</p>
+				<div class="mt-3 flex items-center gap-2.5 text-xs text-slate-500 dark:text-slate-400">
+					<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48'><circle cx='24' cy='24' r='24' fill='%23bbf7d0'/><circle cx='24' cy='19' r='8' fill='%2315803d'/><ellipse cx='24' cy='37' rx='12' ry='8' fill='%2315803d'/></svg>" alt="" class="h-6 w-6 rounded-full">
+					<span>Ada Byron</span>
+					<span aria-hidden="true">&middot;</span>
+					<span>6 min read</span>
+				</div>
+			</div>
+			<a href="single.html" class="block shrink-0 sm:w-52 lg:w-64" tabindex="-1" aria-hidden="true">
+				<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='450'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%2316a34a'/><stop offset='1' stop-color='%230f172a'/></linearGradient></defs><rect width='800' height='450' fill='url(%23g)'/></svg>" alt="" class="aspect-[2/1] w-full rounded-lg object-cover transition-opacity group-hover:opacity-90">
+			</a>
+		</article>
+
+		<article class="group flex flex-col-reverse gap-4 py-8 sm:flex-row sm:items-center sm:gap-8">
+			<div class="min-w-0 flex-1">
+				<div class="flex items-center gap-2 text-xs">
+					<a href="#" class="font-medium text-brand-600 hover:underline dark:text-brand-400">Notes</a>
+					<span aria-hidden="true" class="text-slate-400">&middot;</span>
+					<time class="text-slate-500 dark:text-slate-400" datetime="2026-10-11">October 11, 2026</time>
+				</div>
+				<h2 class="mt-2 font-serif text-xl font-bold leading-snug sm:text-2xl">
+					<a href="#" class="text-slate-900 transition-colors hover:text-brand-700 dark:text-white dark:hover:text-brand-400">On writing every day</a>
+				</h2>
+				<p class="mt-2 leading-relaxed text-slate-600 line-clamp-2 dark:text-slate-400">Notes on habit, momentum, and why a small daily paragraph beats a heroic weekly essay.</p>
+				<div class="mt-3 flex items-center gap-2.5 text-xs text-slate-500 dark:text-slate-400">
+					<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48'><circle cx='24' cy='24' r='24' fill='%23bbf7d0'/><circle cx='24' cy='19' r='8' fill='%2315803d'/><ellipse cx='24' cy='37' rx='12' ry='8' fill='%2315803d'/></svg>" alt="" class="h-6 w-6 rounded-full">
+					<span>Ada Byron</span>
+					<span aria-hidden="true">&middot;</span>
+					<span>3 min read</span>
+				</div>
+			</div>
+			<a href="#" class="block shrink-0 sm:w-52 lg:w-64" tabindex="-1" aria-hidden="true">
+				<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='450'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%230ea5e9'/><stop offset='1' stop-color='%231e293b'/></linearGradient></defs><rect width='800' height='450' fill='url(%23g)'/></svg>" alt="" class="aspect-[2/1] w-full rounded-lg object-cover transition-opacity group-hover:opacity-90">
+			</a>
+		</article>
+
+		<article class="group flex flex-col-reverse gap-4 py-8 sm:flex-row sm:items-center sm:gap-8">
+			<div class="min-w-0 flex-1">
+				<div class="flex items-center gap-2 text-xs">
+					<a href="#" class="font-medium text-brand-600 hover:underline dark:text-brand-400">Essays</a>
+					<span aria-hidden="true" class="text-slate-400">&middot;</span>
+					<time class="text-slate-500 dark:text-slate-400" datetime="2026-10-04">October 4, 2026</time>
+				</div>
+				<h2 class="mt-2 font-serif text-xl font-bold leading-snug sm:text-2xl">
+					<a href="#" class="text-slate-900 transition-colors hover:text-brand-700 dark:text-white dark:hover:text-brand-400">The quiet power of defaults</a>
+				</h2>
+				<p class="mt-2 leading-relaxed text-slate-600 line-clamp-2 dark:text-slate-400">Why good defaults are a design feature, and how small choices compound into a calmer product.</p>
+				<div class="mt-3 flex items-center gap-2.5 text-xs text-slate-500 dark:text-slate-400">
+					<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48'><circle cx='24' cy='24' r='24' fill='%23bbf7d0'/><circle cx='24' cy='19' r='8' fill='%2315803d'/><ellipse cx='24' cy='37' rx='12' ry='8' fill='%2315803d'/></svg>" alt="" class="h-6 w-6 rounded-full">
+					<span>Ada Byron</span>
+					<span aria-hidden="true">&middot;</span>
+					<span>5 min read</span>
+				</div>
+			</div>
+			<a href="#" class="block shrink-0 sm:w-52 lg:w-64" tabindex="-1" aria-hidden="true">
+				<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='450'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23f59e0b'/><stop offset='1' stop-color='%237c2d12'/></linearGradient></defs><rect width='800' height='450' fill='url(%23g)'/></svg>" alt="" class="aspect-[2/1] w-full rounded-lg object-cover transition-opacity group-hover:opacity-90">
+			</a>
+		</article>
+
+		<article class="group flex flex-col-reverse gap-4 py-8 sm:flex-row sm:items-center sm:gap-8">
+			<div class="min-w-0 flex-1">
+				<div class="flex items-center gap-2 text-xs">
+					<a href="#" class="font-medium text-brand-600 hover:underline dark:text-brand-400">Notes</a>
+					<span aria-hidden="true" class="text-slate-400">&middot;</span>
+					<time class="text-slate-500 dark:text-slate-400" datetime="2026-09-27">September 27, 2026</time>
+				</div>
+				<h2 class="mt-2 font-serif text-xl font-bold leading-snug sm:text-2xl">
+					<a href="#" class="text-slate-900 transition-colors hover:text-brand-700 dark:text-white dark:hover:text-brand-400">Reading in the age of feeds</a>
+				</h2>
+				<p class="mt-2 leading-relaxed text-slate-600 line-clamp-2 dark:text-slate-400">A post without a featured image, just to make sure the card layout behaves when the thumbnail is missing entirely.</p>
+				<div class="mt-3 flex items-center gap-2.5 text-xs text-slate-500 dark:text-slate-400">
+					<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48'><circle cx='24' cy='24' r='24' fill='%23bbf7d0'/><circle cx='24' cy='19' r='8' fill='%2315803d'/><ellipse cx='24' cy='37' rx='12' ry='8' fill='%2315803d'/></svg>" alt="" class="h-6 w-6 rounded-full">
+					<span>Ada Byron</span>
+					<span aria-hidden="true">&middot;</span>
+					<span>4 min read</span>
+				</div>
+			</div>
+		</article>
+	</div>
+
+	<nav class="navigation pagination" aria-label="Posts">
+		<div class="nav-links">
+			<span aria-current="page" class="page-numbers current">1</span>
+			<a class="page-numbers" href="#">2</a>
+			<a class="page-numbers" href="#">3</a>
+			<span class="page-numbers dots">&hellip;</span>
+			<a class="page-numbers" href="#">9</a>
+			<a class="page-numbers next" href="#">Older &rarr;</a>
+		</div>
+	</nav>
+</main>
+
+<footer class="border-t border-slate-200 dark:border-slate-800">
+	<div class="mx-auto flex max-w-5xl flex-col items-center gap-4 px-4 py-10 text-sm text-slate-500 dark:text-slate-400 sm:px-6">
+		<ul class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+			<li><a href="#" class="text-slate-600 transition-colors hover:text-slate-900 dark:text-slate-300 dark:hover:text-white">Home</a></li>
+			<li><a href="#" class="text-slate-600 transition-colors hover:text-slate-900 dark:text-slate-300 dark:hover:text-white">About</a></li>
+			<li><a href="#" class="text-slate-600 transition-colors hover:text-slate-900 dark:text-slate-300 dark:hover:text-white">RSS</a></li>
+		</ul>
+		<p>&copy; 2026 Argamora Journal</p>
+		<p class="text-xs text-slate-400 dark:text-slate-500">Powered by WordPress</p>
+	</div>
+</footer>
+<script src="../assets/js/app.js" defer></script>
+</body>
+</html>
