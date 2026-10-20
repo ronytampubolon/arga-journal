@@ -17,7 +17,7 @@ get_header();
 				</figure>
 			<?php endif; ?>
 
-			<div class="entry-content prose prose-neutral mx-auto mt-10 max-w-prose px-4 font-serif sm:px-6 dark:prose-invert prose-a:text-brand-600 dark:prose-a:text-brand-400 prose-img:rounded-xl">
+			<div class="entry-content prose prose-neutral mx-auto mt-10 max-w-prose px-4 font-body sm:px-6 dark:prose-invert prose-a:text-brand-600 dark:prose-a:text-brand-400 prose-img:rounded-xl">
 				<?php
 				the_content();
 				wp_link_pages(

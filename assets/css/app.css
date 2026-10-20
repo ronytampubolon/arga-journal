@@ -63,6 +63,7 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-body: charter, "Bitstream Charter", Cambria, Georgia, "Times New Roman", serif;
     --color-brand-50: #f0fdf4;
     --color-brand-100: #dcfce7;
     --color-brand-200: #bbf7d0;
@@ -1034,6 +1035,9 @@
   .text-right {
     text-align: right;
   }
+  .font-body {
+    font-family: var(--font-body);
+  }
   .font-sans {
     font-family: var(--font-sans);
   }
@@ -1690,6 +1694,9 @@
 }
 .entry-content code, .entry-content pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+.entry-content :where(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-serif);
 }
 .entry-content :where(pre) {
   overflow-x: auto;

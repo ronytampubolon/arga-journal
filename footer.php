@@ -16,7 +16,7 @@
 		}
 		?>
 		<p>&copy; <?php echo esc_html( date_i18n( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?></p>
-		<p class="text-xs text-slate-400 dark:text-slate-500"><?php esc_html_e( 'Built with 🍳', 'ronyfriendy' ); ?></p>
+		<p class="text-xs text-slate-400 dark:text-slate-500"><?php esc_html_e( 'Built with ❤️ by RonyFriendy', 'ronyfriendy' ); ?></p>
 	</div>
 </footer>
 <?php wp_footer(); ?>

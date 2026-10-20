@@ -4,7 +4,10 @@ get_header();
 <main id="primary" class="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
 	<?php if ( is_home() && ! is_paged() ) : ?>
 		<header class="border-b border-slate-200 pb-12 pt-4 text-center dark:border-slate-800 sm:pt-8">
-			<p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-600 dark:text-brand-400"><?php esc_html_e( 'Personal blog', 'inkwell' ); ?></p>
+			<?php $inkwell_kicker = get_theme_mod( 'inkwell_hero_kicker', __( 'Personal blog', 'inkwell' ) ); ?>
+			<?php if ( $inkwell_kicker ) : ?>
+				<p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-600 dark:text-brand-400"><?php echo esc_html( $inkwell_kicker ); ?></p>
+			<?php endif; ?>
 			<h1 class="mt-3 font-serif text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl"><?php bloginfo( 'name' ); ?></h1>
 			<?php $inkwell_description = get_bloginfo( 'description', 'display' ); ?>
 			<?php if ( $inkwell_description ) : ?>

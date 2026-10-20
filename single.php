@@ -22,7 +22,7 @@ get_header();
 				<h1 class="mt-4 font-serif text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl"><?php the_title(); ?></h1>
 
 				<?php if ( has_excerpt() ) : ?>
-					<p class="mt-4 text-lg leading-relaxed text-slate-500 dark:text-slate-400"><?php echo esc_html( get_the_excerpt() ); ?></p>
+					<p class="mt-4 text-lg leading-relaxed text-slate-500 font-body dark:text-slate-400"><?php echo esc_html( get_the_excerpt() ); ?></p>
 				<?php endif; ?>
 
 				<div class="mt-8 flex items-center justify-center gap-3 text-sm text-slate-500 dark:text-slate-400">
@@ -44,7 +44,7 @@ get_header();
 				</figure>
 			<?php endif; ?>
 
-			<div class="entry-content prose prose-neutral mx-auto mt-10 max-w-prose px-4 font-serif sm:px-6 dark:prose-invert prose-a:text-brand-600 dark:prose-a:text-brand-400 prose-img:rounded-xl">
+			<div class="entry-content prose prose-neutral mx-auto mt-10 max-w-prose px-4 font-body sm:px-6 dark:prose-invert prose-a:text-brand-600 dark:prose-a:text-brand-400 prose-img:rounded-xl">
 				<?php
 				the_content();
 				wp_link_pages(
